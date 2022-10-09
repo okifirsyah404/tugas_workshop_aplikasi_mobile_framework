@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -26,15 +26,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Belajar Routing'),
+        title: const Text('Belajar Routing'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Route route = MaterialPageRoute(builder: (context) => AboutPage());
+            Route route =
+                MaterialPageRoute(builder: (context) => const AboutPage());
             Navigator.push(context, route);
           },
-          child: Text('Tap Untuk ke AboutPage'),
+          child: const Text('Tap Untuk ke AboutPage'),
         ),
       ),
     );
@@ -48,14 +49,14 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tentang Aplikasi'),
+        title: const Text('Tentang Aplikasi'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Kembali'),
+          child: const Text('Kembali'),
         ),
       ),
     );
