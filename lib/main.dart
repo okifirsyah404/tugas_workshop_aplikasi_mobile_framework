@@ -19,11 +19,12 @@ class _MainAppState extends State<MainApp> {
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
               colors: [
-                Color(0xFF0093E9),
-                Color(0xFF80D0C7),
+                Color(0xFF2BFF88),
+                Color(0xFF2BD2FF),
+                Color(0xFFFA8BFF),
               ],
               tileMode: TileMode.mirror,
             ),
