@@ -21,12 +21,12 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    images.forEach((image) {
+    for (var image in images) {
       imageColors.putIfAbsent(
           image,
           () => Color.fromARGB(255, Random().nextInt(256),
               Random().nextInt(256), Random().nextInt(256)));
-    });
+    }
 
     return MaterialApp(
       home: Scaffold(
