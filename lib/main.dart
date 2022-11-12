@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:tugas_workshop_aplikasi_mobile_framework/modules/list_movies.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
+  initializeDateFormatting(
+    'id_ID',
+  );
   runApp(const MyApp());
 }
 
@@ -14,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const ListMovie(),
     );
   }
 }
